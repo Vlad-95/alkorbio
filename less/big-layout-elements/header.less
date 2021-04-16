@@ -1,0 +1,113 @@
+.header {
+    color: @base-text;
+    &__wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    &__top {
+        padding: 27px 0 16px;
+    }
+
+    .logo {
+
+    }
+
+    &__text {
+        font-size: 15px;
+        margin: 0 0 0 35px;
+    }
+
+    &__bottom {
+        padding: 14px 0 13px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            margin: auto;
+            content: '';
+            height: 1px;
+            width: 1160px;
+            background: #e1e3e0;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        font-weight: 600;
+        padding: 0;
+        margin: 0;
+
+        &-item {
+            margin-right: 42px;
+            letter-spacing: -0.7px;
+
+            &.current {
+                a {
+                    color: @white;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: -6px;
+                        top: 2px;
+                        background-color: @blue-light;
+                        width: calc(100% + 12px);
+                        height: calc(100% - 1px);
+                        z-index: -1;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__contacts {
+        margin-left: auto;
+
+        &-item {
+            position: relative;
+            font-size: 17px;
+            font-family: @officina-book;
+            letter-spacing: -0.4px;
+            
+            &:not(:first-of-type) {
+                margin-left: 60px;
+            }
+            &_phone {
+                
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: -36px;
+                    top: 0;
+                    width: 24px;
+                    height: 24px;
+                    background-image: url(../img/icons/phone.png);
+                }
+            }
+
+            &_mail {
+                
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: -30px;
+                    top: 3px;
+                    width: 20px;
+                    height: 14px;
+                    background-image: url(../img/icons/mail.png);
+                }
+            }
+        }
+    }
+}

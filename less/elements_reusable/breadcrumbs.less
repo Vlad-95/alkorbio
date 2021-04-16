@@ -1,0 +1,27 @@
+.breadcrumbs {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    padding: 25px 0 16px;
+    margin: 0;
+    font-size: 13px;
+    
+    
+
+    &__item {
+        color: @base-text;
+        position: relative;
+
+        &:not(:last-of-type) {
+            padding-right: 40px;
+            &:after {
+                content: '/';
+                position: absolute;
+                right: 13px;
+                top: 0;
+                color: @base-text;
+            }
+        }
+        
+    }
+}

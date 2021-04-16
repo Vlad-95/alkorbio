@@ -1,0 +1,196 @@
+.about {
+
+    &_main {
+        background-image: url(../img/about-bg.png);
+        background-position: center center;
+        background-size: cover;
+
+        .block-title {
+            margin-bottom: 35px;
+        }
+    }
+
+    &_page {
+        padding: 24px 0 97px;
+
+        .block-title {
+            &__text {
+                font-family: @opensans;
+                font-weight: 700;
+                font-size: 29px;
+            }   
+        }
+
+        .about__row {
+            display: flex;
+            margin-top: 70px;
+        }
+        .about__content {
+            margin-left: 0;
+            width: 100%;
+            max-width: 66%;
+            padding: 0 100px 0 0;
+        }
+
+        .about__side {
+            width: 100%;
+            max-width: 34%;
+            padding-left: 73px;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 57px;
+                width: 1px;
+                height: calc(100% - 110px);
+                background-color: #e1e3e0;
+            }
+        }
+
+        .about__text {
+            margin-top: 34px;
+            p {
+                margin: 0 0 24px;
+                font-size: 17px;
+                line-height: 1.5;
+            }
+        }
+
+        .about__link {
+            font-family: @officina-bold;
+            font-size: 20px;
+
+            &:after {
+                background-image: url(../img/icons/arrow-news-blue.png);
+                height: 24px;
+                width: 24px;
+                right: -35px;
+            }
+        }
+        
+        .about__links {
+            margin-top: 38px;
+            display: flex;
+            flex-direction: column;
+
+            &-item {
+                position: relative;
+                padding-left: 41px;
+                text-decoration: underline;
+                font-size: 17px;
+                margin-bottom: 23px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 2px;
+                    top: -1px;
+                    width: 26px;
+                    height: 26px;
+                    background-image: url(../img/icons/download.png);
+                }
+            }
+        }
+    }
+
+    &__content {
+        width: 48%;
+        margin-left: auto;
+        position: relative;
+        padding: 130px 0 132px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 61px;
+        right: 0;
+    }
+
+    &__text {
+        p {
+            font-size: 15px;
+            color: @base-text;
+            line-height: 1.35;
+            margin: 0 0 20px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__link {
+        color: @blue-light;
+        font-weight: 600;
+        font-size: 16px;
+        position: relative;
+        letter-spacing: 0.3px;
+        margin-top: 37px;
+        display: inline-block;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: -38px;
+            top: -3px;
+            width: 24px;
+            height: 24px;
+            background-image: url(../img/icons/arrow-blue-r.png);
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+
+        &-img {
+            min-width: 57%;
+        }
+
+        &-content {
+            background-color: @blue-medium;
+            padding: 40px;
+            transform: translateX(-61px);
+            min-width: calc(43% + 61px);
+            h2 {
+                color: @white;
+                font-weight: 400;
+                font-family: @officina-book;
+                font-size: 40px;
+                margin: 0 0 24px;
+            }
+
+            p {
+                color: @white;
+                margin: 0 0 30px;
+                font-size: 16px;
+                letter-spacing: -0.45px;
+                line-height: 1.25;
+            }
+
+            a {
+                color: @white;
+                position: relative;
+                font-family: @officina-bold;
+                font-size: 20px;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: -47px;
+                    top: 0;
+                    bottom: 0;
+                    width: 26px;
+                    height: 26px;
+                    background-image: url(../img/icons/arrow-news-white.png);
+                }
+            }
+        }
+    }
+}

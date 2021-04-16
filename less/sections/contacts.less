@@ -1,0 +1,118 @@
+.contact {
+
+    &_page {
+        padding-bottom: 61px;
+    }
+
+    &__wrap {
+        margin-top: 46px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        counter-reset: list;
+    }
+
+    &__item {
+        counter-increment: list;
+        color: @base-text;
+        width: 100%;
+        max-width: 260px;
+
+        &-name {
+            margin: 0 0 36px;
+            font-size: 18px;
+            color: @blue-medium;
+            font-weight: 700;
+            position: relative;
+            padding-left: 40px;
+
+            &:before {
+                content: counter(list);
+                position: absolute;
+                left: 0;
+                top: -4px;
+                width: 30px;
+                height: 30px;
+                background-color: @blue-medium;
+                color: @white;
+                border-radius: 100px;
+                text-align: center;
+                line-height: 30px;
+            }
+        }
+
+        &-block {
+            padding-left: 40px;
+            margin-bottom: 19px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &_address {
+                span {
+                    &:before {
+                        background-image: url(../img/icons/place.png);
+                        left: -38px;
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+
+            &_phone {
+                span {
+                    &:before {
+                        background-image: url(../img/icons/phone-blue.png);
+                        width: 24px;
+                        height: 24px;
+                        left: -38px;
+                    }
+                }
+            }
+
+            &_mail {
+                span {
+                    &:before {
+                        background-image: url(../img/icons/mail-blue.png);
+                        width: 20px;
+                        height: 14px;
+                        left: -35px;
+                    }
+                }
+            }
+            span {
+                font-size: 14px;
+                font-weight: 600;
+                position: relative;
+                display: block;
+                margin-bottom: 9px;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    top: 0;
+                    margin: auto;
+                }
+            }
+
+            p, a {
+                margin: 0;
+                font-size: 16px;
+                letter-spacing: -0.5px;
+            }
+        }
+    }
+
+    &__img {
+        margin-top: 64px;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}

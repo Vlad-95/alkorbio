@@ -1,0 +1,119 @@
+/*=====================
+  Базовая типография
+=====================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+@font-face {
+  font-family: 'officina-bold';
+  src: url('../fonts/OfficinaSans/officinasansc-bold.woff2?eo4p0s#iefix') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'officina-book';
+  src: url('../fonts/OfficinaSans/officinasansc-book.woff2?eo4p0s#iefix') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@opensans: 'Open Sans', sans-serif;
+@officina-bold: 'officina-bold', sans-serif;
+@officina-book: 'officina-book', sans-serif;
+body {
+  font-family: @opensans;  
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  color: @dark-blue;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+& img {
+  max-width: 100%;
+}
+
+h1 {
+  
+}
+
+h2 {
+
+}
+
+p,
+li {
+  // font-size: 15px;
+  line-height: 1.2;
+  
+}
+
+li {
+  // font-size: 17px;
+  line-height: 24px;
+}
+
+p:last-child,
+li:last-child {
+  margin-bottom: 0;
+}
+
+.block-title {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    font-size: 40px;
+    color: @blue-medium;
+    font-weight: 400;
+    font-family: @officina-book;
+    margin: 0;
+  }
+
+  &__link {
+    margin-left: auto;
+
+    &_download {
+      font-size: 13px;
+      text-decoration: underline;
+      color: @base-text;
+      position: relative;
+      transform: translateX(-32px);
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: -51px;
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        background-image: url(../img/icons/pdf.png);
+        background-color: @pink;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+
+    }
+  }
+
+  &_uppercase {
+    text-transform: uppercase;
+  }
+}
+
+
+
+.page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: @blue-medium; 
+  font-size: 40px;
+}
