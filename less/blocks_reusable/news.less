@@ -191,6 +191,18 @@
         border: 1px solid #e1e3e0;
         padding: 25px 19px 27px 69px;
         position: relative;
+
+        &:nth-of-type(2n) {
+            .news__date {
+                background-color: @blue-medium;
+            }            
+        }
+
+        &:nth-of-type(2n + 1) {
+            .news__date {
+                background-color: @blue-light;
+            }
+        }
     }
 
     &__date {
@@ -229,6 +241,108 @@
             margin: auto;
             background-image: url(../img/icons/arrow-news-blue.png);
             transform: rotate(180deg);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .news {
+        &_page {
+            
+            .news__wrap {
+                margin: 12px -20px 0;
+            }
+            
+            .news__item {
+                width: calc((100% / 3) - 40px);
+                margin: 0 20px 39px;
+                min-height: auto;
+            }
+        }
+        
+        &__wrap {
+            margin: 12px -10px 0;
+        }
+    
+        &__item {
+            width: calc((100%/2) - 20px);
+            margin: 0 10px;
+            min-height: 108px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .news {
+        &_page {            
+
+            .news__wrap {
+                margin: 12px -10px 0;
+            }
+            
+            .news__item {
+                width: calc((100% / 3) - 20px);
+                margin: 0 10px 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .news {
+        &_page {            
+
+            .news__wrap {
+                margin: 12px -10px 0;
+            }
+            
+            .news__item {
+                width: calc((100% / 2) - 20px);
+                margin: 0 10px 20px;
+
+                &:last-of-type {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        &__wrap {
+            margin: 12px -10px 0;
+        }
+    
+        &__item {
+            width: calc((100%/1) - 20px);
+            margin: 0 10px 20px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &__content {
+            font-size: 14px;
+            line-height: 1.3;
+            color: @base-text;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .news {
+        &_page {            
+
+            .news__wrap {
+                margin: 12px -10px 0;
+            }
+            
+            .news__item {
+                width: calc((100% / 1) - 20px);
+                margin: 0 10px 20px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 }

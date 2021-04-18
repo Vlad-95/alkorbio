@@ -10,12 +10,44 @@
     }
 
     .logo {
+        min-width: 210px;
+    }
 
+    .burger {
+        position: relative;
+        width: 28px;
+        min-width: 28px;
+        height: 18px;
+        margin-left: auto;
+        display: none;
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: 2px;
+            background-color: @base-text;
+
+            &:nth-of-type(1) {
+                bottom: auto;
+            }
+
+            &:nth-of-type(3) {
+                top: auto;
+            }
+
+
+        }
     }
 
     &__text {
         font-size: 15px;
         margin: 0 0 0 35px;
+        padding-right: 20px;
     }
 
     &__bottom {
@@ -30,7 +62,8 @@
             margin: auto;
             content: '';
             height: 1px;
-            width: 1160px;
+            width: 100%;
+            max-width: 1160px;
             background: #e1e3e0;
         }
     }
@@ -108,6 +141,57 @@
                     background-image: url(../img/icons/mail.png);
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        .logo {
+            min-width: 190px;
+            max-width: 190px;
+        }
+
+        &__text {
+            font-size: 12px;
+            margin: 0 0 0 25px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+
+        &__top {
+            padding: 16px 0;
+        }
+
+        .logo {
+            min-width: 150px;
+            max-width: 150px;
+        }
+
+        .burger {
+            display: block;
+        }
+
+        &__bottom {
+            padding: 14px 0 13px;
+            position: relative;
+
+            display: none;
+    
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        &__text {
+            display: none;
         }
     }
 }

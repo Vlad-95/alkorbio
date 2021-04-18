@@ -84,12 +84,15 @@ li:last-child {
       color: @base-text;
       position: relative;
       transform: translateX(-32px);
+      padding-left: 51px;
+      height: 40px;
+      line-height: 40px;
 
       &:before {
         content: '';
         position: absolute;
-        top: -15px;
-        left: -51px;
+        top: 0;
+        left: 0px;
         width: 40px;
         height: 40px;
         border-radius: 100px;
@@ -116,4 +119,38 @@ li:last-child {
   margin: 0;
   color: @blue-medium; 
   font-size: 40px;
+}
+
+@media (max-width: 1200px) {
+  .block-title {  
+    &__text {
+      font-size: 30px;
+    }
+  
+    &__link {   
+      &_download {
+        transform: translateX(0);  
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .block-title {  
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__text {
+      font-size: 30px;
+    }
+  
+    &__link {   
+      margin-left: 0;
+      margin-top: 12px;
+      &_download {
+        transform: translateX(0);  
+      }
+    }
+  }
 }

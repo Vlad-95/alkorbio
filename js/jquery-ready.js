@@ -24,7 +24,12 @@ $(document).ready(function() {
 
 
     //одинаковая высота новостей
-    if($('.news_page').length) {
-        $('.news_page .news__item .news__content').matchHeight();
+    if($('.news').not('.news_detail').length) {
+        $('.news__item .news__content').matchHeight();
+    }
+
+    //одинаковая высота преимуществ
+    if($('.advantages').length) {
+        $('.advantages__item .advantages__text').matchHeight();
     }
 });
