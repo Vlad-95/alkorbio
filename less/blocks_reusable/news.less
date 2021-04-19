@@ -63,6 +63,13 @@
             font-family: @officina-bold;
             font-size: 15px;
             position: relative;
+            transition: 0.3s;
+
+            &:hover {
+                &:after {
+                    right: -36px;
+                }
+            }
 
             &:after {
                 position: absolute;
@@ -75,6 +82,7 @@
                 height: 24px;
                 content: "";
                 margin: auto;
+                transition: 0.3s;
             }
         }
 

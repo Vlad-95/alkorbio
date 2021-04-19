@@ -136,6 +136,18 @@
             &:last-of-type {
                 margin-right: 0;
             }
+
+            &:not(.current) {
+                a {
+                    transition: 0.3s;
+    
+                    &:hover {
+                        color: @blue-light;
+                    }
+                }
+            }
+
+            
         }
     }
 
@@ -147,10 +159,16 @@
             font-size: 17px;
             font-family: @officina-book;
             letter-spacing: -0.4px;
+            transition: 0.3s;
             
             &:not(:first-of-type) {
                 margin-left: 60px;
             }
+
+            &:hover {
+                color: @blue-light;
+            }
+
             &_phone {
                 
                 &:before {
@@ -252,6 +270,16 @@
             &-item {
                 margin-right: 0;
                 margin-bottom: 10px;
+
+                &:not(.current) {
+                    a {
+                        transition: 0.3s;
+        
+                        &:hover {
+                            color: @white;
+                        }
+                    }
+                }
             }
         }
 
@@ -275,6 +303,10 @@
 
                 &:before {
                     display: none;
+                }
+
+                &:hover {
+                    color: @white;
                 }
             }
 

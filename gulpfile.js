@@ -8,6 +8,7 @@ const gulp = require("gulp"),
 
 const postcss = require("gulp-postcss"),
     autoprefixer = require("autoprefixer"),
+    gulpautoprefixer = require("gulp-autoprefixer"),
     cssDeclarationSorter = require("css-declaration-sorter"),
     postcssPresetEnv = require("postcss-preset-env"),
     cssnano = require("cssnano"),
@@ -43,7 +44,7 @@ const postcssPlugins = [
         ],
     }),
     autoprefixer({
-        grid: "autoplace",
+        browsers: ['last 14 versions'],
     }),
 ];
 
@@ -61,6 +62,7 @@ const styles = () => {
 
     const mergedStream = merge(lessStream)
         .pipe(concat(info.name))
+        //.pipe(gulpautoprefixer({browsers: ['last 14 versions']}))
         .pipe(postcss(postcssPlugins))
         .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest(paths.dist.css));
