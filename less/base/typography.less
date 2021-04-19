@@ -114,7 +114,6 @@ li:last-child {
 
 
 .page-title {
-  font-size: 20px;
   font-weight: 700;
   margin: 0;
   color: @blue-medium; 
@@ -132,6 +131,12 @@ li:last-child {
         transform: translateX(0);  
       }
     }
+  }
+}
+
+@media (max-width: 992px) {
+  .page-title {
+    font-size: 30px;
   }
 }
 

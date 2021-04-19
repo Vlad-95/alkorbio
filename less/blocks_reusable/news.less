@@ -196,11 +196,33 @@
             .news__date {
                 background-color: @blue-medium;
             }            
+
+            .news__content {
+                a {
+                    text-decoration: underline;
+                    color: @blue-light;
+
+                    &:hover {
+                        color: @pink;
+                    }
+                }
+            }
         }
 
         &:nth-of-type(2n + 1) {
             .news__date {
                 background-color: @blue-light;
+            }
+
+            .news__content {
+                a {
+                    text-decoration: underline;
+                    color: @blue-light;
+
+                    &:hover {
+                        color: @pink;
+                    }
+                }
             }
         }
     }
@@ -259,6 +281,48 @@
                 min-height: auto;
             }
         }
+
+        &_detail {    
+            .news__content {                
+                font-size: 20px;            
+            }
+        }
+
+        &__wysiwyg {
+            padding: 50px 100px 0 32px;
+    
+            h1 {
+                font-size: 40px;
+            }
+    
+            h2 {
+                font-size: 34px;
+            }
+    
+            h3 {
+                font-size: 29px;
+            }
+    
+            h4 {
+                font-size: 24px;
+            }
+    
+            h5 {
+                font-size: 18px;
+            }
+    
+            h6 {
+                font-size: 16px;
+            }
+    
+            p {                
+                font-size: 16px;                
+            }
+    
+            ul, ol {                
+                font-size: 16px;
+            }   
+        }
         
         &__wrap {
             margin: 12px -10px 0;
@@ -285,6 +349,55 @@
                 margin: 0 10px 20px;
             }
         }
+
+        &_detail {
+            
+            .news__img {
+                
+                height: 300px;
+                min-width: 48%;
+            }
+    
+            .news__content {                
+                font-size: 20px;            
+            }
+        }
+
+        &__wysiwyg {
+            padding: 50px 100px 0 32px;
+    
+            h1 {
+                font-size: 36px;
+            }
+    
+            h2 {
+                font-size: 30px;
+            }
+    
+            h3 {
+                font-size: 25px;
+            }
+    
+            h4 {
+                font-size: 20px;
+            }
+    
+            h5 {
+                font-size: 18px;
+            }
+    
+            h6 {
+                font-size: 16px;
+            }
+    
+            p {                
+                font-size: 16px;                
+            }
+    
+            ul, ol {                
+                font-size: 16px;
+            }   
+        }
     }
 }
 
@@ -304,6 +417,65 @@
                     margin-bottom: 20px;
                 }
             }
+        }
+
+        &_detail {
+            .news__head {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .news__img {                
+                height: 300px;
+                min-width: 100%;
+            }
+
+            .news__date {
+                position: static;
+                margin-top: 20px;
+            }
+    
+            .news__content {                
+                font-size: 15px;  
+                padding-left: 0;
+                padding-right: 0;
+                padding-top: 20px;          
+            }
+        }
+
+        &__wysiwyg {
+            padding: 50px 0 0 0;
+    
+            h1 {
+                font-size: 32px;
+            }
+    
+            h2 {
+                font-size: 26px;
+            }
+    
+            h3 {
+                font-size: 21px;
+            }
+    
+            h4 {
+                font-size: 18px;
+            }
+    
+            h5 {
+                font-size: 16px;
+            }
+    
+            h6 {
+                font-size: 15px;
+            }
+    
+            p {                
+                font-size: 15px;                
+            }
+    
+            ul, ol {                
+                font-size: 15px;
+            }   
         }
 
         &__wrap {

@@ -66,7 +66,42 @@
             max-width: 1160px;
             background: #e1e3e0;
         }
+
+        .close {
+            position: absolute;
+            width: 28px;
+            min-width: 28px;
+            height: 18px;
+            top: 20px;
+            right: 20px;
+            display: none;
+    
+            span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                width: 100%;
+                height: 2px;
+                background-color: @white;
+    
+                &:nth-of-type(1) {
+                    
+                    transform: rotate(45deg);
+                }
+    
+                &:nth-of-type(2) {
+                   
+                    transform: rotate(-45deg);
+                }
+    
+    
+            }
+        }
     }
+    
 
     &__menu {
         display: flex;
@@ -176,14 +211,73 @@
         }
 
         &__bottom {
-            padding: 14px 0 13px;
-            position: relative;
-
+            padding: 60px 0 20px;
+            position: fixed;
+            top: 0;
+            left: 20%;
             display: none;
-    
-            &::before {
-                display: none;
+            width: 80%;
+            height: 100vh;
+            background-color: @blue-light;
+            z-index: 5;
+
+            .header__wrap {
+                flex-direction: column;
+                align-items: flex-start;
             }
+            
+    
+            &:before {
+                display: block;
+                left: -25%;
+                width: 25%;
+                height: 100vh;
+                background-color: @blue-light;
+                opacity: 0.5;
+                margin: 0;
+                transition: 0.3s;
+                pointer-events: none;
+            }
+
+            .close {
+                display: block;
+            }
+        }
+
+        &__menu {
+            flex-direction: column;
+            color: @white;
+            align-items: flex-start;
+
+            &-item {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__contacts {
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            bottom: 73px;
+            left: 20px;
+
+            &-item {
+                color: @white;
+                margin-left: 0;
+                margin-top: 10px;
+
+                &:not(:first-of-type) {
+                    margin-left: 0;
+                }
+
+                &:before {
+                    display: none;
+                }
+            }
+
         }
     }
 }

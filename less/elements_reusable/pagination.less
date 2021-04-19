@@ -3,6 +3,10 @@
     justify-content: center;
     align-items: center;
 
+    &_left {
+        justify-content: flex-start;
+    }
+
     &__item {
         color: @base-text;
         font-size: 15px;
@@ -44,6 +48,10 @@
 
 @media (max-width: 768px) {
     .pagination {
+        &_left {
+            justify-content: center;
+        }
+
         &__item {
             font-size: 12px;
 
