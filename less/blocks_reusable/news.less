@@ -83,6 +83,7 @@
                 content: "";
                 margin: auto;
                 transition: 0.3s;
+                background-size: cover;
             }
         }
 
@@ -141,6 +142,10 @@
         h6 {
             color: @blue-medium;
             font-weight: 700!important;
+            margin: 64px 0 48px;
+            &:first-child {
+                margin-top: 0;
+            }
         }
 
         h1 {
@@ -271,6 +276,7 @@
             margin: auto;
             background-image: url(../img/icons/arrow-news-blue.png);
             transform: rotate(180deg);
+            background-size: cover;
         }
     }
 }
@@ -373,6 +379,19 @@
 
         &__wysiwyg {
             padding: 50px 100px 0 32px;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin: 48px 0 30px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
     
             h1 {
                 font-size: 36px;
@@ -401,10 +420,16 @@
             p {                
                 font-size: 16px;                
             }
+
+            p {
+               
+                margin: 26px 0 30px;
+            }
     
-            ul, ol {                
+            ul, ol {
                 font-size: 16px;
-            }   
+                margin: 26px 0 30px;
+            }
         }
     }
 }
@@ -452,6 +477,19 @@
 
         &__wysiwyg {
             padding: 50px 0 0 0;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin: 40px 0 24px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
     
             h1 {
                 font-size: 32px;
@@ -480,10 +518,16 @@
             p {                
                 font-size: 15px;                
             }
+
+            p {
+               
+                margin: 16px 0 24px;
+            }
     
-            ul, ol {                
+            ul, ol {
                 font-size: 15px;
-            }   
+                margin: 16px 0 24px;
+            } 
         }
 
         &__wrap {
