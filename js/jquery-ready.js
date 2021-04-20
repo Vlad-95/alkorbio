@@ -68,7 +68,7 @@ $(document).ready(function() {
                 $(this).closest('.js-accordion').find('.js-accordion__content').slideDown();
                 $('.catalog__menu .catalog__menu-item.current').find('.catalog__menu-drop__item').removeClass('active').eq($(this).closest('.js-accordion').index()).addClass('active');
             } else if($('.catalog_detail').length) {
-                $(this).closest('.js-accordion').toggleClass('active').siblings().removeClass('active').find('.js-accordion__content').slideUp();
+                $(this).closest('.js-accordion').toggleClass('active');
                 $(this).closest('.js-accordion').find('.js-accordion__content').slideToggle();
             } else {
                 $(this).closest('.js-accordion').addClass('active').siblings().removeClass('active').find('.js-accordion__content').slideUp();

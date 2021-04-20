@@ -63,17 +63,19 @@
             font-size: 20px;
 
             &:hover {
-                &:after {
+                svg {
                     right: -39px;
                 }
             }
 
-            &:after {
-                background-image: url(../img/icons/arrow-news-blue.png);
-                height: 24px;
-                width: 24px;
+            svg {
+                width: 26px;
+                height: 26px;
+                position: absolute;
                 right: -35px;
-                background-size: cover;
+                transition: 0.3s;
+                border-radius: 100px;
+                border: 2px solid @blue-light;
             }
         }
         
@@ -91,7 +93,7 @@
                 transition: 0.3s;
 
                 &:hover {
-                    &:before {
+                    svg {
                         top: -4px;
                     }
                 }
@@ -100,17 +102,24 @@
                     margin-bottom: 0;
                 }
 
-                &:before {
-                    content: '';
+                svg {
                     position: absolute;
                     left: 2px;
                     top: -1px;
                     width: 26px;
                     height: 26px;
                     transition: 0.3s;
-                    background-image: url(../img/icons/download.png);
-                    background-size: cover;
+                    border-radius: 100px;
+                    border: 2px solid @blue-light;
+                    transform: rotate(90deg);
                 }
+
+                // &:before {
+                //     content: '';
+                    
+                //     background-image: url(../img/icons/download.png);
+                //     background-size: cover;
+                // }
             }
         }
     }
@@ -152,22 +161,31 @@
         transition: 0.3s;
 
         &:hover {
-            &:after {
+            svg {
                 right: -42px;
             }
         }
 
-        &:after {
-            content: '';
-            position: absolute;
-            right: -38px;
-            top: -3px;
+        svg {
             width: 24px;
             height: 24px;
+            position: absolute;
+            top: -2px;
+            right: -38px;
             transition: 0.3s;
-            background-image: url(../img/icons/arrow-blue-r.png);
-            background-size: cover;
         }
+
+        // &:after {
+        //     content: '';
+        //     position: absolute;
+        //     right: -38px;
+        //     top: -3px;
+        //     width: 24px;
+        //     height: 24px;
+        //     transition: 0.3s;
+        //     background-image: url(../img/icons/arrow-blue-r.png);
+        //     background-size: cover;
+        // }
     }
 
     &__head {
@@ -207,13 +225,12 @@
                 transition: 0.3s;
 
                 &:hover {
-                    &:after {
+                    svg {
                         right: -51px;
                     }
                 }
 
-                &:after {
-                    content: '';
+                svg {
                     transition: 0.3s;
                     position: absolute;
                     right: -47px;
@@ -221,9 +238,11 @@
                     bottom: 0;
                     width: 26px;
                     height: 26px;
-                    background-image: url(../img/icons/arrow-news-white.png);
-                    background-size: cover;
+                    border: 2px solid @white;
+                    border-radius: 100px;
                 }
+
+                
             }
         }
     }

@@ -14,8 +14,13 @@
         line-height: 1;
 
         &:first-of-type {
-            img {
-                max-width: 12px;
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+
+            &:after {
+                top: 2px!important;
             }
         }
         
@@ -25,7 +30,7 @@
             &:after {
                 content: '/';
                 position: absolute;
-                right: 13px;
+                right: 19px;
                 top: 0;
                 color: @base-text;
             }
