@@ -162,7 +162,7 @@
             transition: 0.3s;
             
             &:not(:first-of-type) {
-                margin-left: 60px;
+                margin-left: 28px;
             }
 
             &:hover {
@@ -170,31 +170,49 @@
             }
 
             &_phone {
-                
-                &:before {
-                    content: '';
+                padding-left: 36px;
+                svg {
                     position: absolute;
-                    left: -36px;
+                    left: 0;
                     top: 0;
+                    bottom: 0;
+                    margin: auto;
                     width: 24px;
                     height: 24px;
-                    background-size: cover;
-                    background-image: url(../img/icons/phone.png);
                 }
+                // &:before {
+                //     content: '';
+                //     position: absolute;
+                //     left: -36px;
+                //     top: 0;
+                //     width: 24px;
+                //     height: 24px;
+                //     background-size: cover;
+                //     background-image: url(../img/icons/phone.png);
+                // }
             }
 
             &_mail {
-                
-                &:before {
-                    content: '';
+                padding-left: 33px;
+                svg {
                     position: absolute;
-                    left: -30px;
-                    top: 3px;
-                    width: 20px;
-                    height: 14px;
-                    background-size: cover;
-                    background-image: url(../img/icons/mail.png);
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    width: 24px;
+                    height: 24px;
                 }
+                // &:before {
+                //     content: '';
+                //     position: absolute;
+                //     left: -30px;
+                //     top: 3px;
+                //     width: 20px;
+                //     height: 14px;
+                //     background-size: cover;
+                //     background-image: url(../img/icons/mail.png);
+                // }
             }
         }
     }
@@ -298,12 +316,13 @@
                 color: @white;
                 margin-left: 0;
                 margin-top: 10px;
+                padding-left: 0;
 
                 &:not(:first-of-type) {
                     margin-left: 0;
                 }
 
-                &:before {
+                svg {
                     display: none;
                 }
 

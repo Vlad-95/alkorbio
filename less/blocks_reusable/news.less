@@ -16,8 +16,10 @@
 
                 .news__link {
                     color: @blue-light;
-                    &:after {
-                        background-image: url(../img/icons/arrow-news-blue.png);
+                    svg {
+                        path {
+                            fill: @blue-light;
+                        }
                     }
                 }
             }
@@ -29,8 +31,10 @@
 
                 .news__link {
                     color: @blue-medium;
-                    &:after {
-                        background-image: url(../img/icons/arrow-news-violet.png);
+                    svg {
+                        path {
+                            fill: @blue-medium;
+                        }
                     }
                 }
             }
@@ -66,24 +70,23 @@
             transition: 0.3s;
 
             &:hover {
-                &:after {
+                svg {
                     right: -36px;
                 }
             }
 
-            &:after {
+            svg {
                 position: absolute;
-                content: '';
                 top: 0;
                 bottom: 0;
                 margin: auto;
                 right: -32px;
                 width: 24px;
-                height: 24px;
-                content: "";
+                height: 24px;               
                 margin: auto;
                 transition: 0.3s;
-                background-size: cover;
+                border: 2px solid;
+                border-radius: 100px;
             }
         }
 
@@ -265,19 +268,20 @@
         font-size: 20px;
         padding-left: 41px;
 
-        &:before {
-            content: '';
+        svg {
             position: absolute;
             left: 0;
             top: 0;
             bottom: 0;
-            width: 24px;
-            height: 24px;
-            margin: auto;
-            background-image: url(../img/icons/arrow-news-blue.png);
+            width: 26px;
+            height: 26px;
+            margin: auto;            
             transform: rotate(180deg);
-            background-size: cover;
+            border: 2px solid @blue-light;
+            border-radius: 100px;
         }
+
+        
     }
 }
 

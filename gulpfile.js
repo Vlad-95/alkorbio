@@ -8,7 +8,6 @@ const gulp = require("gulp"),
 
 const postcss = require("gulp-postcss"),
     autoprefixer = require("autoprefixer"),
-    gulpautoprefixer = require("gulp-autoprefixer"),
     cssDeclarationSorter = require("css-declaration-sorter"),
     postcssPresetEnv = require("postcss-preset-env"),
     cssnano = require("cssnano"),
